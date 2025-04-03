@@ -34,6 +34,11 @@ PRODUCT_PACKAGES += \
 # LiveDisplay
 $(call soong_config_set_bool,livedisplay_sysfs,enable_ab,true)
 
+# Moto Camera 4
+TARGET_MOTCAMERA4 := devon
+
+$(call inherit-product, vendor/motorola/MotCamera4-bengal/motcamera4.mk)
+
 # NFC
 PRODUCT_PACKAGES += \
     android.hardware.nfc-service.st
