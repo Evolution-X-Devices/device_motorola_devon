@@ -30,6 +30,9 @@ PRODUCT_PACKAGES += \
     init.oem.fingerprint2.sh \
     init.mmi.overlay.rc
 
+# LiveDisplay
+$(call soong_config_set,livedisplay_sysfs,enable_ab,true)
+
 # Moto Camera 4
 TARGET_MOTCAMERA4 := devon
 TARGET_USES_MOTCAMERA4 := true
